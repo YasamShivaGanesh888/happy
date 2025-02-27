@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday!</title>
+    <style>
+      body {
+        text-align: center;
+        background: linear-gradient(135deg, #fca3b0, #df2a76);
+        font-family: "Poppins", sans-serif;
+        color: #931dbe;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      h1 {
+        font-size: 60px;
+        margin-bottom: 10px;
+        animation: bounce 1s infinite alternate;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      }
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        position: relative;
+      }
+      .cake {
+        font-size: 100px;
+        margin: 20px 0;
+      }
+      .slideshow-container {
+        position: relative;
+        width: 600px;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 15px;
+        margin: 20px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      .slides {
+        display: none;
+        width: 100%;
+        height: 100%;
+      }
+      .button {
+        background: #b2e704;
+        color: rgb(24, 22, 10);
+        padding: 15px 40px;
+        border: none;
+        font-size: 25px;
+        cursor: pointer;
+        border-radius: 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.4s, box-shadow 0.2s;
+      }
+      .button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      }
+      .message {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        display: none;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      .floating-balloons {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        pointer-events: none;
+      }
+      .balloon {
+        position: absolute;
+        width: 50px;
+        height: 70px;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.815) 20%, rgba(255, 0, 76, 0.053) 100%);
+        box-shadow: 0px 0px 15px rgba(139, 60, 0, 0.927); 
+        /* background-color: rgba(255, 255, 255, 0.7); */
+        border-radius: 50%;
+        animation: floatUp 5s infinite ease-in-out;
+        .balloon:nth-child(1) { background-color: #a99800; } /* Yellow */
+        .balloon:nth-child(2) { background-color: #bc0947; } /* Pink */
+        .balloon:nth-child(3) { background-color: #029aae; } /* Cyan */
+        .balloon:nth-child(4) { background-color: #02513f; } /* Purple */
+        .balloon:nth-child(5) { background-color: #ee9d23; }
+      }
+      @keyframes floatUp {
+        0% {
+          transform: translateY(100vh) translateX(0);
+        }
+        100% {
+          transform: translateY(-10vh) translateX(20px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="floating-balloons"></div>
+    <div class="container">
+      <h1>🎉 Happy Birthday! 🎂</h1><br>
+      <div class="slideshow-container">
+        <img
+          class="slides"
+          src="https://www.dropbox.com/scl/fi/qkx7n1tifmj0ajxqo5cuk/1.jpg?rlkey=ts9ii2753a1iemgilois7fo0x&st=vwfhg45z&raw=1"
+          alt="Birthday Image 1"
+        />
+        <img
+          class="slides"
+          src="https://www.dropbox.com/scl/fi/cp02qee1c59yn2r16ahim/2.jpg?rlkey=jtgxmx0tpom1xvwnb9jw2wn9p&st=cb6hmkgx&raw=1"
+          alt="Birthday Image 2"
+        />
+        <img
+          class="slides"
+          src="https://www.dropbox.com/scl/fi/8uj4bcv83htidalfxmfpo/3.jpg?rlkey=9cxnembcvpafhm35io3h2s6yo&st=ls8b9jot&raw=1"
+          alt="Birthday Image 3"
+        />
+        <img
+          class="slides"
+          src="https://www.dropbox.com/scl/fi/gmcig6z7h31pei9ize2tz/4.jpg?rlkey=i0u4wukjqbhnydvxzgrl7z0w4&st=5fuo2cta&raw=1"
+          alt="Birthday Image 4"
+        />
+        <img
+          class="slides"
+          src="https://www.dropbox.com/scl/fi/77htohxcla9j5kz402baa/5.jpg?rlkey=vwgajgmcaiu3jwsjzrun6xmhl&st=5enjruha&raw=1"
+          alt="Birthday Image 5"
+        />
+        <img
+          class="slides"
+          src="https://www.dropbox.com/scl/fi/vwxmsvosfmveqqe48tnmm/7.jpg?rlkey=iofgc3x8fsbw3rw6w6fn3tyrf&st=o01oxffy&raw=1"
+          alt="Birthday Image 6"
+        />
+        <img
+          class="slides"
+          src="https://www.dropbox.com/scl/fi/cjkrps69sak8oy4lrhsja/6.jpg?rlkey=b34q2w1b3rvtaouihjczpkqd4&st=6j1x0dyz&raw=1"
+          alt="Birthday Image 7"
+        />
+        <img
+          class="slides"
+          src="https://www.dropbox.com/scl/fi/h1un34jjommt31c9s8ldj/8.jpg?rlkey=y3h1eeintxq4hq4psh4mdxgvd&st=0jd2ud2b&raw=1"
+          alt="Birthday Image 8"
+        />
+      </div>
+      <p class="cake">🎂🎈🎁</p>
+      <button class="button" onclick="showMessage()">
+        Click for a Surprise!
+      </button>
+      <p style="color: gold;" id="birthday-message" class="message">
+        Wishing you a fantastic birthday filled with love and joy! 🎊🎂
+      </p>
+    </div>
+    <script>
+      function showMessage() {
+        document.getElementById("birthday-message").style.display = "block";
+      }
+
+      let slideIndex = 0;
+      function showSlides() {
+        let slides = document.getElementsByClassName("slides");
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000);
+      }
+      showSlides();
+      function createBalloons() {
+        let colors = [
+    
+          "#a99800",
+          "#bc0947",
+          "#029aae",
+          "#390251",
+          "#965a00",
+          "#02513f",
+          "#ee932d",
+        ];
+        let balloonContainer = document.querySelector(".floating-balloons");
+        for (let i = 0; i < 10; i++) {
+          let balloon = document.createElement("div");
+          balloon.classList.add("balloon");
+          balloon.style.left = Math.random() * 100 + "vw";
+          balloon.style.animationDuration = Math.random() * 3 + 3 + "s";
+          balloon.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+          balloonContainer.appendChild(balloon);
+        }
+      }
+      createBalloons();
+    </script>
+  </body>
+</html>
+
